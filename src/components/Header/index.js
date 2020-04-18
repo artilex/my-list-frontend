@@ -1,12 +1,13 @@
 import React from 'react';
 
 import './style.css';
+import LoginButton from '../LoginButton';
 
 function Header() {
   return (
-    <div className="header block">
+    <div className="header">
       <div className="logo">My List</div>
-      <div className="login-button">Sign in</div>
+      <LoginButton />
     </div>
   );
 }
