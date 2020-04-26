@@ -1,18 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import Home from './pages/Public/Home';
-import Header from './components/Header';
+import {
+  PublicHomePage,
+  HistoryPage,
+  AdminHomePage,
+} from './pages';
 
 function App() {
+  /*const login = useSelector(state => state.loginReducer);
+  const adminPage = <Route path='admin' component={AdminPage} />;
+*/
   return (
     <Router>
-      <Header />
-      <div>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path='/' exact component={PublicHomePage} />
+          <Route path='/history' exact component={HistoryPage} />
+          <Route path='/admin' component={AdminHomePage} />
         </Switch>
-      </div>
     </Router>
   );
 }
