@@ -1,37 +1,30 @@
 import axios from 'axios';
 
+const Authorization = localStorage.getItem('token');
+
+const axiosConnect = axios.create({
+  baseURL: 'http://api.the-list.ru',
+  headers: {
+    Authorization,
+    Accept: 'application/json',
+  }
+});
+
 const ApiService = {
   get(resource, params) {
-    return axios.get(`${resource}`, params);
+    return axiosConnect.get(`${resource}`, params);
   },
 
   post(resource, params) {
-    return axios.post(`${resource}`, params);
+    return axiosConnect.post(`${resource}`, params);
   },
 
   put(resource, params) {
-    return axios.put(`${resource}`, params);
+    return axiosConnect.put(`${resource}`, params);
   },
 
   delete(resource, params) {
-    return axios.delete(`${resource}`, params);
-  },
-
-  init() {
-    const baseUrl = 'http://api.the-list.ru';
-
-    axios.defaults.baseURL = baseUrl;
-
-    axios.interceptors.request.use(async (config) => {
-      const Authorization = await localStorage.getItem('token');
-
-      config.headers = {
-        Authorization,
-        Accept: 'application/json',
-      };
-
-      return config;
-    })
+    return axiosConnect.delete(`${resource}`, params);
   }
 }
 

@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import login from '../../redux/actions/login';
 
 import './style.css';
-import ModalContainer from '../ModalForm';
 
 function LoginForm(props) {
-  const closeHandler = () => {
-    props.onClose();
-  }
-
   const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const [password, setPassword] = useState('');
 
   const changeEmail = (event) => {
     setEmail(event.target.value)
   }
 
   const changePass = (event) => {
-    setPass(event.target.value)
+    setPassword(event.target.value)
   }
 
-  const dispatch = useDispatch();
-
-  const auth = () => {
-    dispatch(login(email, pass));
-    closeHandler();
+  const loginHandler = () => {
+    props.login(email, password)
   }
 
   return (
-    <ModalContainer onClose={closeHandler}>
+    <div>
       <div className="login__title">Login</div>
       <form className="login__form">
 
@@ -49,17 +39,17 @@ function LoginForm(props) {
           <input
             type="password"
             name="login-password"
-            value={pass}
+            value={password}
             placeholder="Enter Password"
             onChange={changePass}
           />
         </div>
 
-        <button type="button" className="login__button" onClick={auth}>
+        <button type="button" className="login__button" onClick={loginHandler}>
           Login
         </button>
       </form>
-    </ModalContainer>
+    </div>
   );
 }
 
