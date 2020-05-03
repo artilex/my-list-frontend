@@ -1,16 +1,36 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './style.css';
+import LoginContainer from '../LoginContainer';
 
-function Header(props) {
+const Header = () => {
+  const { isAuth } = useSelector(state => state.authReducer);
+
+  const adminLink = isAuth && (
+    <Link className='header__item' to='/admin'>
+      Admin Panel
+    </Link>
+  );
+
   return (
-    <div className="header">
-      <div className="logo">My List</div>
-      <Link to="/">Filter</Link>
-      <Link to="/history">History</Link>
-      <Link to="/admin">Admin Panel</Link>
-      <div>{props.email}</div>
+    <div className='header'>
+      <Link className='header__item' to='/'>
+        <div className='header__logo'>My List</div>
+      </Link>
+
+      <Link className='header__item' to='/history'>
+        History
+      </Link>
+
+      {adminLink}
+
+      <div className='header__item'>
+        <LoginContainer
+          isAuth={isAuth}
+        />
+      </div>
     </div>
   );
 }

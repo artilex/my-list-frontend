@@ -21,6 +21,7 @@ function LoginForm(props) {
   return (
     <div>
       <div className="login__title">Login</div>
+
       <form className="login__form">
 
         <div className="login__field">
@@ -45,9 +46,12 @@ function LoginForm(props) {
           />
         </div>
 
-        <button type="button" className="login__button" onClick={loginHandler}>
-          Login
-        </button>
+        <div className="login__field">
+          <button type="button" className="login__button" onClick={loginHandler}>
+            Login
+          </button>
+        </div>
+
       </form>
     </div>
   );

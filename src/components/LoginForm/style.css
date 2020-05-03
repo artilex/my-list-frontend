@@ -2,7 +2,6 @@
   font-size: 1.4em;
   margin-bottom: 32px;
   font-weight: bold;
-  text-align: center;
 }
 
 .login__form {
@@ -14,10 +13,16 @@
 .login__field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-weight: bold;
+}
+
+.login__field label,
+.login__field input  {
+  font-size: 1.2em;
 }
 
 .login__button {
   margin-top: 16px;
+  font-size: 1.2em;
 }

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import './style.css';
 
 function History() {
   return (
-    <div>
+    <Fragment>
       History Page
-    </div>
+    </Fragment>
   );
 }
 

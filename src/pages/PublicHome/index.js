@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import './style.css';
 import {
-  Header,
   BookList,
   FilterList,
 } from '../../components';
 
 function PublicHome() {
   return (
-    <div>
-      <Header />
-
-      <div className="wrapper">
+    <Fragment>
         <div className="left-block">
           <FilterList />
         </div>
         <div className="right-block">
           <BookList />
         </div>
-      </div>
-    </div>
+    </Fragment>
   );
 }
 

@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import './style.css';
 
-function AdminHome() {
+const AdminHome = ({ isAuth }) => {
+
+  if (!isAuth) {
+    return <Redirect to={'login'} />;
+  }
+
   return (
-    <div className="wrapper">
+    <Fragment>
       Admin Home Page
-    </div>
+    </Fragment>
   );
 }
 
