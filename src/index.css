@@ -3,8 +3,8 @@ body {
   padding: 0;
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
-  color: #393939;
-  background-color: #f3f3f3;
+  color: #393939;/*614326*/
+  background-color: #f3f3f3;/*e9d8ad*/
 }
 
 a {
@@ -13,5 +13,5 @@ a {
 }
 
 a:hover {
-  color: #4884b9;
+  color: #3e99ed;
 }

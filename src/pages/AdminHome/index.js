@@ -11,7 +11,11 @@ const AdminHome = ({ isAuth }) => {
 
   return (
     <Fragment>
-      Admin Home Page
+      <input type='text' placeHolder='Enter the title' />
+      <button>Search</button>
+
+      <div>
+      </div>
     </Fragment>
   );
 }

@@ -1,0 +1,11 @@
+.menu-item svg {
+  fill: #393939;
+  stroke: #393939;
+  width: 14px;
+  height: 14px;
+}
+
+.menu-item:hover svg {
+  fill: #3e99ed;
+  stroke: #3e99ed;
+}
