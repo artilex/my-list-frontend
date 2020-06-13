@@ -1,8 +1,8 @@
 .menu-item svg {
   fill: #393939;
   stroke: #393939;
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
 }
 
 .menu-item:hover svg {

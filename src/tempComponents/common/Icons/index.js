@@ -1,17 +1,5 @@
 import React from 'react';
 
-const upArrow = (
-  <svg viewBox='0 0 16 16'>
-    <polygon points='8,0 14,6 10,6 10,16 6,16 6,6 2,6' />
-  </svg>
-);
-
-const downArrow = (
-  <svg viewBox='0 0 16 16'>
-    <polygon points='6,0 10,0 10,10 14,10 8,16 2,10 6,10' />
-  </svg>
-);
-
 const threeDots = (
   <svg width='16' height='24' viewBox='0 0 16 24'>
     <circle cx='8' cy='6' r='2' />
@@ -20,26 +8,38 @@ const threeDots = (
   </svg>
 );
 
+const upArrow = (
+  <svg viewBox='0 0 32 32'>
+    <polygon points='16,2 28,14 20,14 20,30 12,30 12,14 4,14' />
+  </svg>
+);
+
+const downArrow = (
+  <svg viewBox='0 0 32 32'>
+    <polygon points='12,2 20,2 20,18 28,18 16,30 4,18 12,18' />
+  </svg>
+);
+
 const doneIcon = (
-  <svg viewBox='0 0 16 16'>
-    <circle cx='8' cy='8' r='7' fill='none' strokeWidth='1' />
-    <polyline points='3,7 7,11 13,5' fill='none' strokeWidth='2' />
+  <svg viewBox='0 0 32 32'>
+    <circle cx='16' cy='16' r='14' fill='none' strokeWidth='2' />
+    <polyline points='6,14 14,22 26,10' fill='none' strokeWidth='4' />
   </svg>
 );
 
 const inProgressIcon = (
-  <svg viewBox='0 0 16 16'>
-    <circle cx='8' cy='8' r='7' fill='none' strokeWidth='1' />
-    <circle cx='4' cy='8' r='1' />
-    <circle cx='8' cy='8' r='1' />
-    <circle cx='12' cy='8' r='1' />
+  <svg viewBox='0 0 32 32'>
+    <circle cx='16' cy='16' r='14' fill='none' strokeWidth='2' />
+    <circle cx='8' cy='16' r='2' />
+    <circle cx='16' cy='16' r='2' />
+    <circle cx='24' cy='16' r='2' />
   </svg>
 );
 
 const pendingIcon = (
-  <svg viewBox='0 0 24 24'>
-    <circle cx='12' cy='12' r='11' fill='none' strokeWidth='1' />
-    <polyline points='12,3 12,12 20,12' fill='none' strokeWidth='2' />
+  <svg viewBox='0 0 32 32'>
+    <circle cx='16' cy='16' r='14' fill='none' strokeWidth='2' />
+    <polyline points='16,5 16,17 26,17' fill='none' strokeWidth='2' />
   </svg>
 );
 
