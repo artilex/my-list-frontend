@@ -1,5 +1,6 @@
 import React, { useState }/*, { useEffect }*/ from 'react';
 import BookList from './tempComponents/BookList';
+import BookView from './tempComponents/organisms/BookView/BookView';
 //import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //import { useDispatch, useSelector } from 'react-redux';
 
@@ -78,6 +79,59 @@ const mockData = [
   },
 ];
 
+const bookForView = {
+  id: 1,
+  title: 'Гарри Поттер и Философский камень',
+  rating: 4,
+  isbn: '978-3-16-148410-0',
+  description: "Книга, покорившая мир, эталон литературы для читателей всех возрастов, синоним успеха. Книга, сделавшая Джоан Роулинг самым читаемым писателем современности. Книга, ставшая культовой уже для нескольких поколений. «Гарри Поттер и Философский камень» - история начинается. Одиннадцатилетний мальчик-сирота Гарри Поттер живет в семье своей тетки и даже не подозревает, что он - настоящий волшебник. Но однажды прилетает сова с письмом для него, и жизнь Гарри Поттера изменяется навсегда. Он узнает, что зачислен в Школу Чародейства и Волшебства, выясняет правду о загадочной смерти своих родителей, а в результате ему удается раскрыть секрет философского камня.",
+  imageLink: 'https://s1.livelib.ru/boocover/1000833877/o/b3f0/Dzh._K._Rouling__Garri_Potter_i_Filosofskij_kamen.jpeg',
+  authors: [
+    {
+      id: 1,
+      name: 'Джоан Роулинг',
+    },
+    {
+      id: 2,
+      name: 'Дж. К. Роулинг',
+    }
+  ],
+  series: [
+    {
+      id: 1,
+      name: 'Harry Potter',
+      orderNumber: 1
+    },
+    {
+      id: 2,
+      name: 'Serie 2',
+      orderNumber: 9
+    }
+  ],
+  tags: [
+    {
+      id: 1,
+      name: 'Tag 1',
+    },
+    {
+      id: 2,
+      name: 'Tag 2',
+    },
+    {
+      id: 3,
+      name: 'Tag 3',
+    },
+    {
+      id: 4,
+      name: 'Tag 4',
+    },
+    {
+      id: 5,
+      name: 'Tag 5',
+    }
+  ],
+};
+
 function App() {
   const wrapperStyle = {
     display: 'flex',
@@ -90,6 +144,7 @@ function App() {
   return (
     <div style={ wrapperStyle } >
       <div style={{width: '1080px'}}>
+        <BookView book={bookForView} />
         <BookList name='Read' books={mockData} isClose={true} />
         <BookList name='Currently Read' books={mockData} isClose={false} />
         <BookList name='Want to Read' books={mockData} isClose={false} />
